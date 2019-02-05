@@ -7,4 +7,5 @@ def index(request):
         "title": "Hello/Index",
         "msg": "これはサンプルで作ったページです。"
     }
+    hello
     return render(request, "hello/index.html", params)
