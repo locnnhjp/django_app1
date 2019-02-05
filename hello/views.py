@@ -5,7 +5,15 @@ from django.http import HttpResponse
 def index(request):
     params = {
         "title": "Hello/Index",
-        "msg": "これはサンプルで作ったページです。"
+        "msg": "これはサンプルで作ったページです。",
+        "goto": "next"
     }
-    hello
+    return render(request, "hello/index.html", params)
+
+def next(request):
+    params = {
+        "title": "Hello/Next",
+        "msg": "これは、もう1つのページです。",
+        "goto": "index"
+    }
     return render(request, "hello/index.html", params)
